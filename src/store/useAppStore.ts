@@ -180,7 +180,7 @@ export function canAccessDocument(user: User, doc: Document): boolean {
     return false;
 }
 
-export function canAccessUseCase(user: User, uc: UseCase): boolean {
+export function canAccessUseCase(user: User, _uc: UseCase): boolean {
     return user.role !== 'External Contractor';
 }
 

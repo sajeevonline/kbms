@@ -1,4 +1,4 @@
-import type { Document, UseCase, User, Role } from '../types';
+import type { Document, UseCase, User } from '../types';
 
 export const canAccessDocument = (user: User, doc: Document): boolean => {
     // 1. Public is open to all
