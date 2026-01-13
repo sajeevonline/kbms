@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: 221 80% 55%;
+    /* Blueish */
+    --color-surface: 0 0% 100%;
+    --color-background: 210 20% 98%;
+    --color-text: 215 25% 27%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
