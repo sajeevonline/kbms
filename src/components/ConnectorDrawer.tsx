@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { X, Save, CheckCircle, Folder, ChevronRight, ChevronDown, Lock, Globe, Server, Clock, RefreshCw, Shield, Users } from 'lucide-react';
-import { useAppStore, type Connector, type ConnectorConfig, type Role, USERS } from '../store/useAppStore';
+import { X, Save, CheckCircle, Folder, ChevronRight, ChevronDown, Lock, Globe, Server, RefreshCw, Shield, Users } from 'lucide-react';
+import { useAppStore, type Connector, type ConnectorConfig, type Role } from '../store/useAppStore';
 
 interface ConnectorDrawerProps {
     isOpen: boolean;
@@ -180,8 +180,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${activeTab === tab.id
-                                    ? 'border-blue-600 text-blue-600'
-                                    : 'border-transparent text-slate-500 hover:text-slate-700'
+                                ? 'border-blue-600 text-blue-600'
+                                : 'border-transparent text-slate-500 hover:text-slate-700'
                                 }`}
                         >
                             {tab.label}
@@ -247,8 +247,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                                         key={m}
                                         onClick={() => updateConfig({ authMethod: m as any })}
                                         className={`px-4 py-2 text-sm rounded-lg border ${formData.config?.authMethod === m
-                                                ? 'bg-blue-50 border-blue-200 text-blue-700 font-medium'
-                                                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                                            ? 'bg-blue-50 border-blue-200 text-blue-700 font-medium'
+                                            : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
                                             }`}
                                     >
                                         {m}
@@ -353,8 +353,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                                                     updateConfig({ fileExtensions: newExts });
                                                 }}
                                                 className={`px-3 py-1 text-xs font-medium rounded-full border transition-all ${isSelected
-                                                        ? 'bg-blue-100 border-blue-200 text-blue-700'
-                                                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                                                    ? 'bg-blue-100 border-blue-200 text-blue-700'
+                                                    : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
                                                     }`}
                                             >
                                                 {ext.toUpperCase()}
@@ -390,8 +390,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                                             key={freq}
                                             onClick={() => updateConfig({ syncFrequency: freq as any })}
                                             className={`p-3 rounded-lg border text-start transition-all ${formData.config?.syncFrequency === freq
-                                                    ? 'bg-blue-50 border-blue-200 ring-1 ring-blue-300'
-                                                    : 'bg-white border-slate-200 hover:border-blue-300'
+                                                ? 'bg-blue-50 border-blue-200 ring-1 ring-blue-300'
+                                                : 'bg-white border-slate-200 hover:border-blue-300'
                                                 }`}
                                         >
                                             <span className={`block text-sm font-bold ${formData.config?.syncFrequency === freq ? 'text-blue-700' : 'text-slate-700'
@@ -423,8 +423,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                                             <button
                                                 onClick={() => updateConfig({ syncMode: 'Incremental' })}
                                                 className={`px-3 py-1.5 text-xs font-semibold rounded ${formData.config?.syncMode === 'Incremental'
-                                                        ? 'bg-white shadow-sm text-orange-700'
-                                                        : 'text-orange-600 hover:bg-orange-100'
+                                                    ? 'bg-white shadow-sm text-orange-700'
+                                                    : 'text-orange-600 hover:bg-orange-100'
                                                     }`}
                                             >
                                                 Incremental
@@ -432,8 +432,8 @@ export const ConnectorDrawer = ({ isOpen, onClose, editingConnector }: Connector
                                             <button
                                                 onClick={() => updateConfig({ syncMode: 'Full' })}
                                                 className={`px-3 py-1.5 text-xs font-semibold rounded ${formData.config?.syncMode === 'Full'
-                                                        ? 'bg-white shadow-sm text-orange-700'
-                                                        : 'text-orange-600 hover:bg-orange-100'
+                                                    ? 'bg-white shadow-sm text-orange-700'
+                                                    : 'text-orange-600 hover:bg-orange-100'
                                                     }`}
                                             >
                                                 Full Sync

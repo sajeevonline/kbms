@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Document, UseCase, Incident, Connector } from '../types';
+import type { Document, UseCase, Incident, Connector } from '../types';
 import { DOCUMENTS, USE_CASES, INCIDENTS, CONNECTORS } from '../data/mockData';
 
 interface DataState {

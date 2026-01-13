@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sidebar } from './Sidebar';
 import { Topbar } from './Topbar';
-import { DemoGuide } from '../DemoGuide'; // We will create this
+// We will create this
 import { useAppStore } from '../../store/useAppStore';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {

@@ -13,7 +13,7 @@ import { AdminPage } from './pages/AdminPage';
 
 
 // MOCK NAVIGATION CONTEXT
-export const NavContext = React.createContext({ path: '/', navigate: (p: string) => { } });
+export const NavContext = React.createContext({ path: '/', navigate: (_p: string) => { } });
 
 function App() {
   const { language } = useAppStore();

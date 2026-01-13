@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, CheckCircle, AlertCircle, RefreshCw, Plus, Edit2, Trash2, Settings } from 'lucide-react';
+import { Link, CheckCircle, AlertCircle, RefreshCw, Plus, Trash2, Settings } from 'lucide-react';
 import { useAppStore, type Connector } from '../store/useAppStore';
 import { ConnectorDrawer } from '../components/ConnectorDrawer';
 
@@ -86,9 +86,9 @@ export const ConnectorsPage = () => {
                                 <td className="px-6 py-4">
                                     <div className="flex items-center gap-3">
                                         <div className={`p-2 rounded-lg ${conn.type === 'SharePoint' ? 'bg-blue-100 text-blue-600' :
-                                                conn.type === 'Confluence' ? 'bg-sky-100 text-sky-600' :
-                                                    conn.type === 'ServiceNow' ? 'bg-green-100 text-green-600' :
-                                                        'bg-purple-100 text-purple-600'
+                                            conn.type === 'Confluence' ? 'bg-sky-100 text-sky-600' :
+                                                conn.type === 'ServiceNow' ? 'bg-green-100 text-green-600' :
+                                                    'bg-purple-100 text-purple-600'
                                             }`}>
                                             <Link className="w-4 h-4" />
                                         </div>
@@ -100,14 +100,14 @@ export const ConnectorsPage = () => {
                                 </td>
                                 <td className="px-6 py-4">
                                     <span className={`px-2 py-1 text-xs rounded-full inline-flex items-center gap-1 ${conn.status === 'Active' ? 'bg-green-100 text-green-700' :
-                                            conn.status === 'Error' ? 'bg-red-100 text-red-700' :
-                                                conn.status === 'Syncing' ? 'bg-blue-100 text-blue-700' :
-                                                    'bg-slate-100 text-slate-600'
+                                        conn.status === 'Error' ? 'bg-red-100 text-red-700' :
+                                            conn.status === 'Syncing' ? 'bg-blue-100 text-blue-700' :
+                                                'bg-slate-100 text-slate-600'
                                         }`}>
                                         <span className={`w-1.5 h-1.5 rounded-full ${conn.status === 'Active' ? 'bg-green-500' :
-                                                conn.status === 'Error' ? 'bg-red-500' :
-                                                    conn.status === 'Syncing' ? 'bg-blue-500' :
-                                                        'bg-slate-500'
+                                            conn.status === 'Error' ? 'bg-red-500' :
+                                                conn.status === 'Syncing' ? 'bg-blue-500' :
+                                                    'bg-slate-500'
                                             }`}></span>
                                         {conn.status}
                                     </span>

@@ -1,4 +1,4 @@
-import { Document, UseCase, Incident, Connector, User, AuditLog } from '../types';
+import type { Document, UseCase, Incident, Connector, User } from '../types';
 
 export const USERS: User[] = [
     { id: 'u1', name: 'Ahmed Al-Farsi', role: 'Electrical Engineer', avatar: 'AF' },

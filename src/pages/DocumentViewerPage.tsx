@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { useAppStore, canAccessDocument } from '../store/useAppStore';
 import { Send, ArrowLeft, MoreVertical, FileText, User, Bot, AlertCircle } from 'lucide-react';
 import { NavContext } from '../App';
-import React from 'react';
+
 
 export const DocumentViewerPage = () => {
     const { navigate, path } = useContext(NavContext);
@@ -98,8 +98,8 @@ export const DocumentViewerPage = () => {
                                 {msg.role === 'user' ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
                             </div>
                             <div className={`p-4 rounded-2xl text-base leading-relaxed max-w-[80%] shadow-sm ${msg.role === 'user'
-                                    ? 'bg-slate-50 text-slate-800 border border-slate-200 rounded-tr-none'
-                                    : 'bg-blue-50 text-blue-900 border border-blue-100 rounded-tl-none'
+                                ? 'bg-slate-50 text-slate-800 border border-slate-200 rounded-tr-none'
+                                : 'bg-blue-50 text-blue-900 border border-blue-100 rounded-tl-none'
                                 }`}>
                                 {msg.content}
                             </div>
